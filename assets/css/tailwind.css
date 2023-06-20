@@ -1,0 +1,275 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base{
+    img{
+        @apply w-full;
+    }
+    p{
+        @apply text-content text-lg font-normal;
+    }
+    h1{
+        @apply text-5xl font-bold text-secondary;
+    }
+    h2{
+        @apply text-4xl font-bold text-secondary;
+    }
+    h3{
+        @apply text-3xl font-bold text-secondary;
+    }
+    h4{
+        @apply text-2xl font-bold text-secondary;
+    }
+    h5{
+        @apply text-xl font-bold;
+    }
+    h6{
+        @apply text-lg font-semibold text-secondary;
+    }
+    a{
+        @apply no-underline;
+    }
+    
+}
+@layer components{
+	.btn{
+        @apply inline-block text-white py-[8.5px]  text-sm sm:text-[16px] font-medium;
+    }
+    .btn-primary{
+        @apply bg-primary rounded-lg sm:py-3 px-4 sm:px-5 ;
+    }
+    .btn-secondary{
+        @apply bg-secondary rounded-[50px] hover:bg-primary transition-all py-3 px-5;
+    }
+    .btn-success{
+        @apply border-[1.3px] border-secondary rounded-[50px] text-secondary py-3 px-5 ; 
+    }
+}
+.h-icon i{
+    @apply text-secondary hover:text-primary transition-all text-lg sm:text-2xl;
+}
+.footer-w ul li {
+    display: flex;
+    gap: 14px;
+    align-items: center;
+}
+.custom-postcord ul li::before {
+	content: "";
+	background: url(../img/check.svg) no-repeat scroll 50%/contain;
+	width: 17px;
+	height: 29px;
+	position: absolute;
+	left: 0;
+}
+.custom-postcord ul li{
+    @apply  relative py-2 pl-8 text-listcolor text-[16px];
+}
+.nav-links {
+    @apply flex flex-wrap gap-5 mt-12 justify-center;
+} 
+.nav-links .page-numbers {
+    @apply bg-primary rounded-full w-14 h-14 flex justify-center items-center text-white text-lg font-bold ;
+}
+.page-numbers.current {
+	opacity: 0.5;
+	cursor: no-drop;
+}
+.comment-form label {
+	display: block;
+}
+.comment-form input[type="text"], .comment-form input[type="email"] .comment-form textarea {
+	width: 61%;
+	border: 1px solid #000c20;
+	padding: 6px 10px;
+	border-radius: 8px;
+}
+.comment-form textarea {
+    border: 1px solid #000c20;
+    border-radius: 10px;
+    padding: 12px;
+    width: 100%;
+}
+.comment-author.vcard {
+    width: 32px;
+}
+.form-submit input[type="submit"] {
+    @apply bg-primary text-white py-3 px-5 rounded-xl cursor-pointer font-semibold;
+}
+.service-list li{
+    @apply text-lg text-secondary relative pl-9 border-b border-secondary border-opacity-20 pb-6;
+}
+.service-list li:last-child {
+	border: 0;
+	padding-bottom: 0;
+    
+}
+.service-list li::before {
+	content: "";
+	background: url(../img/Vector.svg) no-repeat scroll 50%/contain;
+	position: absolute;
+	width: 22px;
+	height: 31px;
+	left: 0;
+}
+.testimonial-img::before {
+	content: "";
+    background: url(../img/img-icon.svg) no-repeat scroll 50%/contain;
+}
+.slider .owl-nav button {
+    @apply !text-5xl !text-white rounded-full w-[60px] h-[60px] flex justify-center !bg-secondary;
+}
+.slider .owl-nav {
+    @apply absolute flex justify-between top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-9;
+}
+.slider .owl-dots {
+	position: absolute;
+}
+.slider .owl-dots {
+	position: absolute;
+    @apply absolute left-1/2 -translate-x-1/2 bottom-8;
+}
+.slider .owl-dot {
+    @apply !bg-white w-2 h-2 rounded-full mx-[6px];
+}
+.slider .owl-dot.active {
+	@apply !bg-primary
+}
+
+
+.program .owl-nav button {
+    @apply !text-5xl !text-secondary w-[50px] h-[50px] flex justify-center !bg-white;
+}
+.program .owl-nav {
+    @apply absolute flex justify-between top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2  transition-all duration-300 w-full;
+}
+.program:hover button.owl-prev{
+    transform: translateX(-2px);
+    @apply transition-all duration-300
+}
+.program:hover button.owl-next{
+    transform: translateX(0px);
+    @apply transition-all duration-300
+}
+.owl-nav .owl-prev{
+	transform: translateX(-52px);
+}
+.owl-nav .owl-next{
+	transform: translateX(52px);
+}
+.program .owl-nav button span{
+	position: absolute;
+	top: -6px;
+}
+
+
+.footer-list img {
+	max-width: 161px;
+}
+.footer-list2 ul {
+    @apply flex flex-col gap-3
+}
+.footer-list2 ul li {
+    @apply text-content text-[16px] font-normal relative pl-7;
+}
+.footer-list2 {
+    @apply grid gap-5
+}
+
+.footer-list3 {
+    @apply grid gap-5
+}
+.footer-list3 ul {
+    @apply flex flex-col gap-3
+}
+.footer-list3 ul li {
+    @apply text-content text-[16px] font-normal relative pl-6;
+}
+
+.menu-item-202::before {
+	content: "\f095";
+	font-family: "Font Awesome 6 Free";
+    @apply absolute left-0 font-bold text-primary;
+}
+.menu-item-203::before {
+	content: "\f0e0";
+	font-family: "Font Awesome 6 Free";
+    @apply absolute left-0 font-bold text-primary;
+}
+.menu-item-204::before {
+	content: "\f3c5";
+	font-family: "Font Awesome 6 Free";
+    @apply absolute left-0 font-bold text-primary;
+}
+.footer-list3 ul li::before {
+	content: "";
+    @apply  bg-primary p-1 rounded-full absolute left-0 top-[9px];
+}
+.service-col1 ul{
+    @apply service-list flex flex-col gap-4;
+}
+
+
+.service-input input {
+	display: none;
+}
+.service-input span {
+    @apply  block relative pl-8 text-lg text-secondary font-normal;
+}
+.service-input span::before {
+	content: "";
+    @apply absolute left-[.1px] w-5 h-5 top-[4.5px] border-[1.5px] border-secondary rounded-full;
+}
+.service-input span::after {
+	content: "";
+    @apply absolute left-[4.5px] w-[11px] h-[11px] top-[9.5px] bg-primary rounded-full opacity-0;
+}
+.service-input input:checked + span:before{
+    border-color: #ff5f13;
+    transition: .5s;
+}
+.service-input input:checked + span:after{
+    @apply opacity-100 transition-all duration-500 ;
+}
+   
+.accordion-title.active::before {
+    content: "\f077";
+    font-family: "Font Awesome 6 Free";
+}
+    
+.accordion-title::before {
+font-family: "Font Awesome 6 Free";
+@apply content-["\f078"] absolute right-0 text-2xl ;
+}
+
+.tab-content:not(.active){
+    @apply hidden ;
+    
+}
+.nav-link.active {
+	@apply border-b-4 border-primary;
+}
+
+
+
+/* .btn2{
+    position: relative;
+    padding: 10px 20px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+.btn2::after {
+	position: absolute;
+	content: "";
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background: red;
+	transition: all .3s ease-in-out;
+	z-index: -1;
+	transform: skewX(45deg) scaleX(0);
+	border-radius: 26px;
+}
+.btn2:hover:after{
+    transform: skewX(0deg) scale(1, 1);
+} */
