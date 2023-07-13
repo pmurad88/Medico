@@ -119,7 +119,7 @@
     @apply !text-5xl !text-white rounded-full w-[60px] h-[60px] flex justify-center !bg-secondary;
 }
 .slider .owl-nav {
-    @apply absolute flex justify-between top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2 px-9;
+    @apply absolute hidden md:flex justify-between top-1/2 left-1/2 w-[92%] -translate-x-1/2 -translate-y-1/2 px-9;
 }
 .slider .owl-dots {
 	position: absolute;
@@ -137,7 +137,7 @@
 
 
 .program .owl-nav button {
-    @apply !text-5xl !text-secondary w-[50px] h-[50px] flex justify-center !bg-white;
+    @apply !text-5xl !text-secondary w-[33px] sm:w-[50px] h-[45px] sm:h-[50px] flex justify-center !bg-white;
 }
 .program .owl-nav {
     @apply absolute flex justify-between top-1/2 left-1/2  -translate-x-1/2 -translate-y-1/2  transition-all duration-300 w-full;
@@ -248,7 +248,9 @@ font-family: "Font Awesome 6 Free";
 .nav-link.active {
 	@apply border-b-4 border-primary;
 }
-
+.program-content h1{
+    @apply lg:text-5xl text-3xl;
+}
 
 
 /* .btn2{

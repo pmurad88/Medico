@@ -10,11 +10,17 @@ jQuery(document).ready(function($){
     $(".slider").owlCarousel({
         items:1,
         nav:true,
-        dots:true
+        dots:true,
+        autoplay: true,
+        loop: true,
+        smartSpeed: 600,
     });
     $(".program").owlCarousel({
         items:1,
         nav:true,
+        autoplay: true,
+        loop: true,
+        smartSpeed: 600,
     });
 
     $('.accordion-content').hide();

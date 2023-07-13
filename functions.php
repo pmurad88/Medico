@@ -132,4 +132,44 @@ add_action( 'init', 'wpmedico_custom_post' );
     
     }
     add_action( 'wp_enqueue_scripts', 'wptheme_assets' );
-?>
+
+
+
+    function da_get_views_post($post_id){
+        $key = 'post_views_count';
+    
+        $count = get_post_meta($post_id,$key, true);
+    
+        if($count == ''){
+            $count = 0;
+    
+            delete_post_meta($post_id,$key);
+    
+            add_post_meta($post_id,$key,$count);
+    
+        }else{
+            $count++;
+            update_post_meta($post_id,$key, $count);
+        }
+    }
+    function da_get_post_views($post_id){
+        $key = 'post_views_count';
+        $count = get_post_meta($post_id,$key, true);
+    
+        if($count == ''){
+            $count = 0;
+    
+            delete_post_meta($post_id,$key);
+    
+            add_post_meta($post_id,$key,$count);
+    
+            return "0 View";
+    
+        }
+    
+        return $count. ' Views';
+    }
+
+
+
+    //include get_template_directory() . '/inc/acf_fields.php';

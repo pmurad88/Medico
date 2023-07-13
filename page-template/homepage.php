@@ -21,7 +21,7 @@ get_header();
         ?>
         <div class="bg-banner w-full h-full object-cover absolute z-10 bottom-0"></div>
         <div class="absolute bottom-20 left-1/2 -translate-x-1/2 w-full text-center z-20 ">
-            <h1 class="text-white text-[80px] mb-6">
+            <h1 class="text-white text-[50px] md:text-[65px] lg:text-[80px] mb-6">
                 <?php the_sub_field('text1'); ?>
             </h1>
             <h2 class="text-white">
@@ -34,7 +34,7 @@ get_header();
     ?>
 </div>
 
-<div class=" pt-24 pb-12">
+<div class=" pt-10 md:pt-16 lg:pt-24 pb-12">
     <div class="flex flex-col gap-6 max-w-[670px] m-auto text-center">
         <?php the_field('program_section_content') ?>
         <div class="flex justify-center">
@@ -52,7 +52,7 @@ get_header();
 </div>
 <div class="">
     <div class="container">
-    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-x-6">
+    <div class="grid sm:grid-cols-2 xl:grid-cols-4 gap-y-6 gap-x-6">
             <?php 
                 $all_post = new wp_Query([
                     'post_type' => 'program',
@@ -70,7 +70,7 @@ get_header();
 <?php 
     if( get_field('section_content')){
 ?>
-<div class="pt-24 pb-12">
+<div class="pt-10 md:pt-16 lg:pt-24 pb-12">
     <div class="flex flex-col gap-6 max-w-[670px] m-auto text-center">
         <?php the_field('section_content') ?>
         <div class="flex justify-center">
@@ -99,7 +99,7 @@ get_header();
 <?php 
     if( get_field('testimonial_sec_content')){
 ?>
-<div class="pt-24 pb-12">
+<div class="pt-10 md:pt-16 lg:pt-24 pb-12">
     <div class="flex flex-col gap-6 max-w-[670px] m-auto text-center">
         <?php the_field('testimonial_sec_content');?>
         <div class="flex justify-center">
@@ -123,6 +123,25 @@ get_header();
         <div class="">
 
         </div>
+        <div class="flex gap-5 flex-wrap justify-center">
+            <?php
+                $categores = get_categories([
+                    'taxonomy' => 'testimonial-type'
+                ]);
+                foreach($categores as $category ){
+            ?>
+                <div class="flex items-center gap-3 text-xl w-[127px] h-[64px] bg-slate justify-center rounded-xl hover:bg-primary hover:text-white transition-all duration-300">
+                    <i class="hover:text-white fa-solid fa-star"></i>
+                    <a class="" href="<?php echo get_category_link($category->term_id );?>">
+                        <?php 
+                            echo $category->name;
+                        ?>
+                    </a>
+                </div>
+            <?php 
+                }
+            ?>
+        </div>
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-y-5
         gap-x-5">
             <?php  
@@ -139,7 +158,7 @@ get_header();
         </div>
     </div>
 </div>
-<div class="py-12">
+<div class=" py-12 lg:py-20">
     <div class="container">
         <div class="grid grid-cols-2 gap-4 max-w-[968px] m-auto">
             <div class="w-[358px] h-[455]">

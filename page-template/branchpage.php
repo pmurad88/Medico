@@ -6,11 +6,11 @@
  */
 get_header();
 ?>
-<?php get_template_part('template-parts/branchpage-header');?>
+<?php get_template_part('template-parts/page-header');?>
 
 <div class="py-10">
     <div class="container">
-        <div class="">
+        <div class="grid grid-cols-2 gap-5">
                 <?php 
                    $all_post = new WP_Query([
                     'post_type' => 'branch',

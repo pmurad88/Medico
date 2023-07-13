@@ -1,4 +1,4 @@
-<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-x-4">
+<div class="grid md:grid-cols-2 xl:grid-cols-4 gap-x-4 gap-y-6">
     <div class=" service-col1 bg-background hover:bg-white py-[72px] px-7 rounded-[20px] hover:drop-shadow-2xl transition-all">
         <?php
             the_field('colum1');
